@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.16d58689.css",
+    "main.js": "/static/js/main.e1deaa8b.js",
+    "static/js/703.3af3d6e9.chunk.js": "/static/js/703.3af3d6e9.chunk.js",
+    "static/js/598.911c07c6.chunk.js": "/static/js/598.911c07c6.chunk.js",
+    "static/media/quittance.jpg": "/static/media/quittance.f0ad89033e3d78222b30.jpg",
+    "static/media/logo.png": "/static/media/logo.a45b98c72535483ca3e8.png",
+    "static/media/logo_ministere.png": "/static/media/logo_ministere.d1c7a7ef38a01b6409db.png",
+    "index.html": "/index.html",
+    "main.16d58689.css.map": "/static/css/main.16d58689.css.map",
+    "main.e1deaa8b.js.map": "/static/js/main.e1deaa8b.js.map",
+    "703.3af3d6e9.chunk.js.map": "/static/js/703.3af3d6e9.chunk.js.map",
+    "598.911c07c6.chunk.js.map": "/static/js/598.911c07c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16d58689.css",
+    "static/js/main.e1deaa8b.js"
+  ]
+}

@@ -1,0 +1,77 @@
+server:
+  port: 8081
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: -1
+      max-request-size: -1
+     
+  jackson:
+    time-zone: Africa/Tunis
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+      add-mappings: false
+    content:
+      type:
+        mappings:
+          html: text/html
+          css: text/css
+          js: application/javascript
+          png: image/png
+          json: application/json
+  mvc:
+    throw-exception-if-no-handler-found: true
+    dispatch-options-request: true
+
+
+
+  datasource: # Première source de données (primaire)
+    jdbcUrl: jdbc:oracle:thin:@192.1.1.3:1521/SNITDB?useUnicode=true&characterEncoding=AL32UTF8
+    username: personnel
+    password: personnel
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+          region.factory_class: org.hibernate.cache.NoCacheProvider
+        format_sql: true
+        connection:
+          charSet: AL32UTF8
+
+  integration:  # Deuxième source de données (secondaire)
+    datasource:
+      jdbcUrl: jdbc:oracle:thin:@192.1.1.3:1521/SNITDB
+      username: integration
+      password: integration
+      driver-class-name: oracle.jdbc.OracleDriver
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+logging:
+  file:
+    name: logs/app.log
+  level:
+    root: INFO
+
+
+
+  
+
